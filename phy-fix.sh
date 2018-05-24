@@ -32,17 +32,14 @@ uboot_ver_get() {
 boot_device_get() {
 	local fields
 	local line
-	local TMPFILE
 
-	TMPFILE=`mktemp`
-	mount > $TMPFILE
 	while read line; do
 		fields=( $line )
 		if [ "${fields[2]}" == "/" ]; then
 			break
 		fi
-	done < $TMPFILE
-	echo ${fields[0]} | sed -re 's/p[0-9]+//g'
+	done < <(mount)
+	echo ${fields[0]} | sed -re 's/p[0-9]+$//g'
 	return 0;
 }
 

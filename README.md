@@ -7,12 +7,14 @@ the patch source is [here](https://github.com/turmary/Bootloader-Builder/commit/
 
 ## Usage
 ```bash
-# Bash environment, please copy only to avoid typo
+# Internet connection is needed, bash environment, please copy only to avoid typo
+
 # Method 1
+# single command line
 sudo sh -c "wget -q -O - https://raw.githubusercontent.com/turmary/bbg-phy-fix/master/phy-fix.sh | bash"
 
 # Method 2
-# or the equal mutliple commands
+# the equal mutliple commands
 sudo wget https://raw.githubusercontent.com/turmary/bbg-phy-fix/master/phy-fix.sh
 sudo chmod a+x phy-fix.sh
 sudo ./phy-fix.sh

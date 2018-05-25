@@ -11,9 +11,7 @@ FILES="MLO u-boot.img"
 TMP=/tmp
 
 uboot_ver_get() {
-	local ver
-	local uboot_ver
-	local YEAR
+	local ver uboot_ver YEAR
 
 	ver=201603
 	if [ ! -f $MLO_BK ]; then
@@ -30,8 +28,7 @@ uboot_ver_get() {
 }
 
 boot_device_get() {
-	local fields
-	local line
+	local fields line
 
 	while read line; do
 		fields=( $line )
@@ -44,6 +41,8 @@ boot_device_get() {
 }
 
 file_download() {
+	local url
+
 	url=$BASE_URL/$VERSION/$1
 	wget -O $TMP/$1 $url
 	if [ "$?" -ne 0 ]; then
@@ -94,6 +93,11 @@ sync
 sleep 1
 sync
 
-echo "Update U-boot with $VERSION phy fixed successful"
-echo "Please reboot your device!"
+cat <<-EOF
+
+	================================================================================
+	Update U-boot with $VERSION phy fixed successful"
+	Please reboot your device!"
+	================================================================================
+EOF
 

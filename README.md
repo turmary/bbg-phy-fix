@@ -11,11 +11,11 @@ the patch source is [here](https://github.com/turmary/Bootloader-Builder/commit/
 
 # Method 1
 # single command line
-sudo sh -c "wget -q -O - https://raw.githubusercontent.com/turmary/bbg-phy-fix/master/phy-fix.sh | bash"
+sudo sh -c "wget -q -O - https://github.com/turmary/bbg-phy-fix/raw/master/phy-fix.sh | bash"
 
 # Method 2
 # the equal mutliple commands
-sudo wget https://raw.githubusercontent.com/turmary/bbg-phy-fix/master/phy-fix.sh
+sudo wget https://github.com/turmary/bbg-phy-fix/raw/master/phy-fix.sh
 sudo chmod a+x phy-fix.sh
 sudo ./phy-fix.sh
 ```

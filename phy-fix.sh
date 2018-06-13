@@ -3,7 +3,7 @@
 
 # set -x
 
-BASE_URL=https://raw.githubusercontent.com/turmary/bbg-phy-fix/master
+BASE_URL=https://github.com/turmary/bbg-phy-fix/raw/master
 MLO_BK=/opt/backup/uboot/MLO
 SOC=/boot/SOC.sh
 VERSION=
